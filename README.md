@@ -1,38 +1,26 @@
-# 网站交付手册
+# Ship the Website
 
-整理网站需求、实现、发布边界和验收方法。
+**A website needs more than a successful build. Working notes on requirements, review, handoff and the evidence needed for delivery.**
 
-GitHub：[eli-ovops/website-delivery-handbook](https://github.com/eli-ovops/website-delivery-handbook)
+## What you will find
 
-## 内容
+Working methods, templates and retrospectives you can read and adapt. The material keeps its original project context rather than pretending to be a universal set of instructions.
 
-本次公开副本包含 11 个来源文件。
+## Start here
 
-- [`.gitignore.source`](.gitignore.source)
-- [`07_GitHub源码协作与预览部署SOP.md`](07_GitHub%E6%BA%90%E7%A0%81%E5%8D%8F%E4%BD%9C%E4%B8%8E%E9%A2%84%E8%A7%88%E9%83%A8%E7%BD%B2SOP.md)
-- [`网站项目SOP版本登记.md`](%E7%BD%91%E7%AB%99%E9%A1%B9%E7%9B%AESOP%E7%89%88%E6%9C%AC%E7%99%BB%E8%AE%B0.md)
-- [`卓建官网开发方法论归档_20260719/归档校验信息.md`](%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E5%BD%92%E6%A1%A3_20260719/%E5%BD%92%E6%A1%A3%E6%A0%A1%E9%AA%8C%E4%BF%A1%E6%81%AF.md)
-- [`卓建官网开发方法论归档_20260719/卓建官网开发方法论最终版_20260719/00_给同事的使用说明.md`](%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E5%BD%92%E6%A1%A3_20260719/%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E6%9C%80%E7%BB%88%E7%89%88_20260719/00_%E7%BB%99%E5%90%8C%E4%BA%8B%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md)
-- [`卓建官网开发方法论归档_20260719/卓建官网开发方法论最终版_20260719/01_卓建官网从Payload安装到V1.3.5_复盘与开发偏好.md`](%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E5%BD%92%E6%A1%A3_20260719/%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E6%9C%80%E7%BB%88%E7%89%88_20260719/01_%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E4%BB%8EPayload%E5%AE%89%E8%A3%85%E5%88%B0V1.3.5_%E5%A4%8D%E7%9B%98%E4%B8%8E%E5%BC%80%E5%8F%91%E5%81%8F%E5%A5%BD.md)
-- [`卓建官网开发方法论归档_20260719/卓建官网开发方法论最终版_20260719/02_前端架构与开发规范.md`](%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E5%BD%92%E6%A1%A3_20260719/%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E6%9C%80%E7%BB%88%E7%89%88_20260719/02_%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83.md)
-- [`卓建官网开发方法论归档_20260719/卓建官网开发方法论最终版_20260719/03_版本演进与开发日志.md`](%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E5%BD%92%E6%A1%A3_20260719/%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E6%9C%80%E7%BB%88%E7%89%88_20260719/03_%E7%89%88%E6%9C%AC%E6%BC%94%E8%BF%9B%E4%B8%8E%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97.md)
-- [`卓建官网开发方法论归档_20260719/卓建官网开发方法论最终版_20260719/04_交付清单与检查表.md`](%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E5%BD%92%E6%A1%A3_20260719/%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E6%9C%80%E7%BB%88%E7%89%88_20260719/04_%E4%BA%A4%E4%BB%98%E6%B8%85%E5%8D%95%E4%B8%8E%E6%A3%80%E6%9F%A5%E8%A1%A8.md)
-- [`卓建官网开发方法论归档_20260719/卓建官网开发方法论最终版_20260719/MANIFEST.md`](%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E5%BD%92%E6%A1%A3_20260719/%E5%8D%93%E5%BB%BA%E5%AE%98%E7%BD%91%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA%E6%9C%80%E7%BB%88%E7%89%88_20260719/MANIFEST.md)
+- [Project guide](%E5%8E%86%E5%8F%B2%E5%BD%92%E6%A1%A3/%E6%97%A7%E7%BB%84%E7%BB%87%E9%80%80%E5%BD%B9%E8%B5%84%E6%96%99_20260809/README.md)
+- [Working note 2](%E7%BD%91%E7%AB%99%E9%A1%B9%E7%9B%AESOP%E7%89%88%E6%9C%AC%E7%99%BB%E8%AE%B0.md)
+- [Working note 3](07_GitHub%E6%BA%90%E7%A0%81%E5%8D%8F%E4%BD%9C%E4%B8%8E%E9%A2%84%E8%A7%88%E9%83%A8%E7%BD%B2SOP.md)
+- [Complete source inventory](SOURCE_MANIFEST.csv)
 
-文件类型：.md（10）、(no extension)（1）。
+## Current scope
 
-## 阅读方式
+This snapshot includes 11 source files. Original media, databases, private account records and other unprocessed attachments were not included in this text-and-source release.
 
-按主题说明、研究记录和相关程序阅读；保留当时的探索状态与已知缺口。
+This update improves the English presentation. It does not rerun the project, install a skill, reproduce an old test, or establish production readiness. Some original working documents retain their source language; machine-specific paths or setup assumptions may still need adaptation.
 
-## 来源与许可
+## Sources and license
 
-本仓库新增介绍及用户原创部分按 MIT 许可公开；第三方材料按其各自许可证和署名使用，不以本许可证重新授权第三方内容。
+The owner's original contributions and new presentation notes follow the [retained license](LICENSE). Third-party material keeps its own licenses and attribution; this does not relicense it.
 
-## 当前状态与验证边界
-
-- 本次完成公开副本整理和静态检查；没有运行来源代码、构建 App、安装 Skill 或启动服务。
-- 项目可能处于原型、实验或研究阶段；没有将其表述为生产交付、客户验收或经过验证的投资收益。
-- 图片、视频、数据库、真实账户记录及未确认可公开的附件没有随本次文本/源码副本上传。
-- 部分相对链接、运行依赖或素材可能仍需补齐；原始快照中的静态引用缺口数为 0，该数字不是运行失败数。
-- [本次来源文件清单](SOURCE_MANIFEST.csv)
+[Source paths and hashes](SOURCE_MANIFEST.csv)
